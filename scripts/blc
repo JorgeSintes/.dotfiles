@@ -1,0 +1,16 @@
+#!/bin/bash     
+
+if (("$1" == 0 ))
+    then
+    bluetoothctl disconnect
+    fi
+
+if (("$1" == 1 ))
+    then
+    bluetoothctl connect 50:F9:58:42:70:FA
+    fi
+
+if (("$1" == 2 ))
+    then
+    bluetoothctl connect AC:80:0A:32:21:C8
+    fi
