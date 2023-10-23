@@ -33,8 +33,9 @@ require('lspconfig').pylsp.setup({
         pylsp = {
             plugins = {
                 pycodestyle = {
-                    -- ignore space after comma, line too long, no space after opperand
-                    ignore = {'E231', 'E501', 'E226'},
+                    -- ignore continuation line over-indented, continuation line under-indented, 
+                    -- no space after opperand, space after comma, line too long 
+                    ignore = {'E127', 'E128', 'E226', 'E231', 'E501'},
                 }
             }
         }

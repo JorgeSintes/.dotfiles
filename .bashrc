@@ -105,6 +105,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -126,3 +128,4 @@ alias python=python3
 
 alias pyenv="source ~/venvs/\$(ls ~/venvs/ | fzf -1)/bin/activate"
 alias pylenv="source \$(find  -path '*/bin/activate' | xargs -n1 dirname | xargs -n1 dirname | fzf -1)/bin/activate"
+
