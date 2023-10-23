@@ -1,1 +1,4 @@
-xrandr --output DP-4 --auto --right-of eDP-1
+#!/bin/bash
+
+screen=$(xrandr | grep -e "^DP-[1-9] connected" | sed 's/ connected.*//')
+xrandr --output $screen --auto --right-of eDP-1
