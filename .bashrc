@@ -120,6 +120,7 @@ export PATH=/usr/local/cuda-12.1/bin:$PATH
 
 alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 export PATH=/home/jorge@grazper.net/bin/:$PATH
+export PATH=/home/jorge@grazper.net/scripts/:$PATH
 alias vim=nvim
 alias python=python3
 

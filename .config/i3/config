@@ -51,8 +51,6 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec "i3-sensible-terminal -e tmux"
 bindsym $mod+Shift+Return exec i3-sensible-terminal
-bindsym $mod+g exec "i3-sensible-terminal -e ssh grazper -t tmux"
-bindsym $mod+Shift+g exec "i3-sensible-terminal -e ssh grazper"
 
 # kill focused window
 bindsym $mod+q kill
@@ -193,7 +191,7 @@ bar {
 	font pango:DejaVu Sans Mono 8
 }
 # background
-exec --no-startup-id "feh --bg-fill /home/yorch/pictures/abstract-background.jpeg"
+exec --no-startup-id "feh --bg-fill /home/jorge@grazper.net/Pictures/wallpaper.jpg"
 
 # Some remaps
 bindsym $mod+w exec firefox
