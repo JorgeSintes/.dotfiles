@@ -59,3 +59,15 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
+
+local function toggle_diagnostics()
+    if vim.diagnostic.is_disabled() then
+        vim.diagnostic.enable()
+        print("Diagnostics enabled")
+    else
+        vim.diagnostic.disable()
+        print("Diagnostics disabled")
+    end
+end
+
+vim.keymap.set("n", "<F4>", toggle_diagnostics)
