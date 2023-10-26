@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
   }
     use 'christoomey/vim-tmux-navigator'
     use 'tpope/vim-commentary'
+    use 'tpope/vim-fugitive'
+    use 'zbirenbaum/copilot.lua'
 
 end)
 
