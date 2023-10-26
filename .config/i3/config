@@ -200,14 +200,14 @@ bindsym $mod+Shift+x exec "i3lock -c 000000"
 bindsym $mod+Tab workspace back_and_forth
 
 ##  Screenshots in files
-bindsym Print exec --no-startup-id maim --format=png "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
-bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
-bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+bindsym F11 exec --no-startup-id maim --format=png "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+bindsym $mod+F11 exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
+bindsym Shift+F11 exec --no-startup-id maim --format=png --select "/home/$USER/pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
 
 ## Screenshots in clipboards
-bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+bindsym Ctrl+F11 exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+F11 exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+F11 exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
 
 # bindsym $mod+g exec --no-startup-id i3-sensible-terminal -e "cd $(find ~/ ~/Documents -mindepth 1 -maxdepth 1 -type d | /home/jorge@grazper.net/bin/fzf)"
 bindsym $mod+g exec i3-sensible-terminal -e "bash -i -c open-vscode"

@@ -1,0 +1,16 @@
+{
+    "window.zoomLevel": 2,
+    "python.venvFolders": [
+        "~/venvs"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "~/venvs",
+    "python.autoComplete.extraPaths": [
+        "~/Documents/"
+    ],
+    "python.analysis.extraPaths": [
+        "~/Documents/grz.python/",
+        "~/Documents/grz.python.net/",
+        "~/Documents/grz.projects.netui/",
+    ],
+}
