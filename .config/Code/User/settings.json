@@ -1,0 +1,12 @@
+{
+    "window.zoomLevel": 2,
+    "python.venvFolders": [
+        "~/venvs"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.venvPath": "~/venvs",
+    "python.autoComplete.extraPaths": [
+    ],
+    "python.analysis.extraPaths": [
+    ],
+}

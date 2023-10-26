@@ -20,3 +20,6 @@ alias svim="sudo -E -s nvim"
 
 export PATH="$PATH:/home/yorch/scripts"
 alias config-git='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+alias pyenv="source ~/venvs/\$(ls ~/venvs/ | fzf -1)/bin/activate"
+alias pylenv="source \$(find  -path '*/bin/activate' | xargs -n1 dirname | xargs -n1 dirname | fzf -1)/bin/activate"
