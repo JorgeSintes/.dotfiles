@@ -25,21 +25,7 @@ require('mason-lspconfig').setup({
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
     end,
-  },
-})
-
-require('lspconfig').pylsp.setup({
-    settings = {
-        pylsp = {
-            plugins = {
-                pycodestyle = {
-                    -- ignore continuation line over-indented, continuation line under-indented, 
-                    -- no space after opperand, space after comma, line too long 
-                    ignore = {'E127', 'E128', 'E226', 'E231', 'E501'},
-                }
-            }
-        }
-    }
+  }
 })
 
 local cmp = require('cmp')
@@ -59,15 +45,3 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
 })
-
-local function toggle_diagnostics()
-    if vim.diagnostic.is_disabled() then
-        vim.diagnostic.enable()
-        print("Diagnostics enabled")
-    else
-        vim.diagnostic.disable()
-        print("Diagnostics disabled")
-    end
-end
-
-vim.keymap.set("n", "<F4>", toggle_diagnostics)
