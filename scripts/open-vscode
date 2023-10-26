@@ -7,7 +7,6 @@ else
 fi
 
 if [[ -z $selected ]]; then
-    sleep 2
     exit 0
 fi
 
