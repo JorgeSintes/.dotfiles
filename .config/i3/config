@@ -51,6 +51,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec "i3-sensible-terminal -e tmux"
 bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+g exec "i3-sensible-terminal -e ssh -X grazper -t tmux"
+bindsym $mod+Shift+g exec "i3-sensible-terminal -e ssh -X grazper"
 
 # kill focused window
 bindsym $mod+q kill
