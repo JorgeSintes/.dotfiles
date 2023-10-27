@@ -13,4 +13,6 @@
         "~/Documents/grz.python.net/",
         "~/Documents/grz.projects.netui/",
     ],
+    "workbench.startupEditor": "none",
+    "editor.lineNumbers": "relative",
 }

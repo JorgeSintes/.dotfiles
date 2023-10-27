@@ -212,4 +212,4 @@ bindsym Ctrl+$mod+F11 exec --no-startup-id maim --format=png --window $(xdotool 
 bindsym Ctrl+Shift+F11 exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
 
 # bindsym $mod+g exec --no-startup-id i3-sensible-terminal -e "cd $(find ~/ ~/Documents -mindepth 1 -maxdepth 1 -type d | /home/jorge@grazper.net/bin/fzf)"
-bindsym $mod+g exec i3-sensible-terminal -e "bash -i -c open-vscode"
+bindsym $mod+c exec i3-sensible-terminal -e "bash -i -c open-vscode"
