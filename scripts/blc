@@ -14,3 +14,8 @@ if (("$1" == 2 ))
     then
     bluetoothctl connect AC:80:0A:32:21:C8
     fi
+
+if (("$1" == 3 ))
+    then
+    bluetoothctl connect 04:21:44:09:54:40
+    fi
