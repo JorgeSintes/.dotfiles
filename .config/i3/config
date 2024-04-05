@@ -196,7 +196,8 @@ bar {
 exec --no-startup-id "feh --bg-fill /home/yorch/pictures/abstract-background.jpeg"
 
 # Some remaps
-bindsym $mod+w exec firefox
+# bindsym $mod+w exec firefox
+bindsym $mod+w exec chromium
 bindsym $mod+e exec i3-sensible-terminal -e "ranger"
 bindsym $mod+Shift+x exec "i3lock -c 000000"
 bindsym $mod+Tab workspace back_and_forth
@@ -213,3 +214,5 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip
 
 bindsym $mod+c exec i3-sensible-terminal -e bash -i -c open-vscode
 bindsym $mod+Shift+c exec i3-sensible-terminal -e bash -i -c open-vscode-remote
+
+bindsym $mod+m exec --no-startup-id "/home/yorch/scripts/toggle_keyboard"
