@@ -1,25 +1,53 @@
 {
-    "window.zoomLevel": 2,
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "remote.SSH.defaultForwardedPorts": [],
-    "editor.minimap.enabled": false,
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-    // python
-    "python.venvFolders": [
-        "~/venvs"
-    ],
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.venvPath": "~/venvs",
-    "python.autoComplete.extraPaths": [
-    ],
-    "python.analysis.extraPaths": [
-    ],
+  // editor stuff
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": "single",
+  "workbench.activityBar.visible": false,
+  "breadcrumbs.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.lineNumbers": "relative",
+  "editor.renderWhitespace": "all",
+  "window.menuBarVisibility": "hidden",
+  "editor.rulers": [
+    110
+  ],
+  // extensions
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "remote.SSH.defaultForwardedPorts": [],
+  "editor.minimap.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "catppuccin.italicComments": false,
+  "catppuccin.italicKeywords": false,
+  // python
+  "python.venvFolders": [
+    "~/venvs"
+  ],
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.venvPath": "~/venvs",
+  "python.autoComplete.extraPaths": [],
+  "python.analysis.extraPaths": [],
+  "python.analysis.typeCheckingMode": "basic",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "jupyter.askForKernelRestart": false,
+  "svelte.enable-ts-plugin": true,
+  "liveServer.settings.useLocalIp": true,
+  "window.zoomLevel": 2,
+  "vslilypond.compilation.additionalCommandLineArguments": "--include=/home/yorch/documents/transcriptions/stylesheets",
+  "lilypond-workshop.compilerPath": "",
 }
