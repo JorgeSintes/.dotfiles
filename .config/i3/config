@@ -198,7 +198,7 @@ exec --no-startup-id "feh --bg-fill /home/yorch/pictures/abstract-background.jpe
 # Some remaps
 # bindsym $mod+w exec firefox
 bindsym $mod+w exec chromium
-bindsym $mod+e exec i3-sensible-terminal -e "ranger"
+bindsym $mod+e exec i3-sensible-terminal -e tmux new-session ranger
 bindsym $mod+Shift+x exec "i3lock -c 000000"
 bindsym $mod+Tab workspace back_and_forth
 
