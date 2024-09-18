@@ -6,17 +6,17 @@ Managed using [GNU stow](https://www.gnu.org/software/stow/) as seen in [this Dr
 1. Clone the repo in the home folder.
 
 2. Get stow:
-```console
+```bash
 sudo pacman -S stow  # Arch (btw)
 sudo apt-get install stow  # Debian, Ubuntu...
 ```
 
 3. Navigate to the `.dotfiles` and do:
-```console
+```bash
 stow .
 ```
 If there's no conflict this should just run. However if your configuration is different you'll get some errors. In this case you can run
-```console
+```bash
 stow --adopt .
 ```
 which will instead copy the different files inside your dotfiles. Since it's a `git` repo you can then `diff` and all the other stuff to decide on what to keep, what to discard, instead push to a new branch... Cool, isn't it?
