@@ -22,7 +22,24 @@ alias vim='nvim'
 alias svim="sudo -E -s nvim"
 
 export PATH="$PATH:/home/yorch/scripts"
+export PATH="$PATH:/usr/local/lib/node-v21.6.2/bin"
 alias config-git='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias pyenv="source ~/venvs/\$(ls ~/venvs/ | fzf -1)/bin/activate"
-alias pylenv="source \$(find  -path '*/bin/activate' | xargs -n1 dirname | xargs -n1 dirname | fzf -1)/bin/activate"
+# alias pyenv="source ~/venvs/\$(ls ~/venvs/ | fzf -1)/bin/activate"
+# alias pyenv="VENV_PATH=\$(find ~/venvs -mindepth 1 -maxdepth 1 -type d | fzf -1); tmux set-environment VENV_PATH \"\$VENV_PATH\"; source \$VENV_PATH/bin/activate"
+# if [ -n "$VENV_PATH" ] && [ -d "$VENV_PATH" ]; then
+# source "$VENV_PATH/bin/activate"
+# fi
+# alias pylenv="source \$(find  -path '*/bin/activate' | xargs -n1 dirname | xargs -n1 dirname | fzf -1)/bin/activate"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+# lilypond
+export PATH=/home/yorch/.local/bin:$PATH
+
+# uv
+. "$HOME/.cargo/env"
+
+xset r rate 300 40
