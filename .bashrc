@@ -18,6 +18,7 @@ fi
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
+export EDITOR=nvim
 alias vim='nvim'
 alias svim="sudo -E -s nvim"
 
@@ -42,3 +43,13 @@ export PATH=/home/yorch/.local/bin:$PATH
 . "$HOME/.cargo/env"
 
 xset r rate 300 40
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
