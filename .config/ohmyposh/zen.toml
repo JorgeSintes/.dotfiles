@@ -38,17 +38,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
       commit_icon = '@'
       fetch_status = true
 
-  [[blocks.segments]]
-    alias = 'Dollar'
-    type = 'text'
-    style = 'plain'
-    background = 'transparent'
-    foreground_templates = [
-      "{{ if gt .Code 0 }}red{{ end }}",
-      "{{ if eq .Code 0 }}magenta{{ end }}"
-    ]
-    template = '$'
-
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
@@ -63,10 +52,26 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     [blocks.segments.properties]
       threshold = 2000
 
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    alias = 'Dollar'
+    type = 'text'
+    style = 'plain'
+    background = 'transparent'
+    foreground_templates = [
+      "{{ if gt .Code 0 }}red{{ end }}",
+      "{{ if eq .Code 0 }}magenta{{ end }}"
+    ]
+    template = '$'
+
 [transient_prompt]
   background = 'transparent'
   foreground = 'blue'
-  template = "<green>{{ .UserName }}@{{ .HostName }}</> <blue>{{ .Segments.Path.Path }}</> <magenta>$</> "
+  template = "<green>{{ .UserName }}@{{ .HostName }}</> <blue>{{ .Segments.Path.Path }}</> \n<magenta>$</> "
 
 [secondary_prompt]
   foreground = 'magenta'
