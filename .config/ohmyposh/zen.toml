@@ -25,6 +25,18 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 	
 		[blocks.segments.properties]
 			style = 'full'
+
+	[[blocks.segments]]
+		type = 'git'
+		style = 'plain'
+		background = 'transparent'
+		foreground = '#6c6c6c'
+		template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<cyan>{{ if gt .Behind 0 }} ↓{{ end }}{{ if gt .Ahead 0 }} ↑{{ end }}</> '
+
+		[blocks.segments.properties]
+			branch_icon = ''
+			commit_icon = '@'
+			fetch_status = true
 	
 	[[blocks.segments]]
 		alias = 'Dollar'
@@ -36,9 +48,26 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 			"{{ if eq .Code 0 }}magenta{{ end }}"
 		]
 		template = '$'
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 2000
 
 [transient_prompt]
 		background = 'transparent'
 		foreground = 'blue'
 		template = "<green>{{ .UserName }}@{{ .HostName }}</> <blue>{{ .Segments.Path.Path }}</> <magenta>$</> "
 
+[secondary_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '>> '
