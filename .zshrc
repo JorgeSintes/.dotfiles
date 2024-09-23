@@ -18,9 +18,13 @@ zinit light Aloxaf/fzf-tab
 
 # Add in snippets
 zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::command-not-found
 
 # Load completions
 autoload -U compinit && compinit
+
+zinit cdreplay -q
 
 # Customize prompt with oh-my-posh
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
@@ -47,15 +51,28 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias vim='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Change kb input speed
 xset r rate 300 40
 
+# uv
 . "$HOME/.cargo/env"
 
+# yazi
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+	  builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
