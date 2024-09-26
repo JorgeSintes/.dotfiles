@@ -81,6 +81,22 @@
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0006"
+        },
+        "when": "terminalFocus",
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0010"
+        },
+        "when": "terminalFocus",
+    },
     // file explorer
     {
         "key": "ctrl+n",
