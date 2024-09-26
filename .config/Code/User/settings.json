@@ -5,9 +5,11 @@
     "breadcrumbs.enabled": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
+    "editor.selectionClipboard": false,
     "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
     "editor.fontLigatures": true,
     "editor.lineNumbers": "relative",
+    "editor.wordWrap": "off",
     "editor.renderWhitespace": "all",
     "window.menuBarVisibility": "hidden",
     "editor.rulers": [
@@ -39,7 +41,12 @@
     },
     "editor.formatOnSave": true,
     "[html]": {
-        "editor.formatOnSave": false
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[markdown]": {
+        "editor.wordWrap": "off",
+        "prettier.proseWrap": "always"
     },
     "jupyter.askForKernelRestart": false,
     "svelte.enable-ts-plugin": true,
@@ -48,7 +55,7 @@
     "vslilypond.compilation.additionalCommandLineArguments": "--include=/home/yorch/documents/transcriptions/stylesheets",
     "lilypond-workshop.compilerPath": "",
     "prettier.printWidth": 110,
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 2,
     "github.copilot.editor.enableAutoCompletions": true,
     // "ruff.path": ["/home/jorge@grazper.net/.local/share/uv/tools/ruff/bin/ruff"]
 }
