@@ -78,3 +78,7 @@ function y() {
   fi
   rm -f -- "$tmp"
 }
+
+# paths
+export PATH="$PATH:$HOME/scripts"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.local/lib/raylib-5.0_linux_amd64/lib/"

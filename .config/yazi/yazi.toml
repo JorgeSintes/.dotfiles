@@ -1,0 +1,9 @@
+[opener]
+pdf = [
+    { run = 'mupdf "$@"', orphan=true, desc="open-pdf" },
+]
+
+[open]
+prepend_rules = [
+    { name = "*.pdf", use = "pdf" },
+]

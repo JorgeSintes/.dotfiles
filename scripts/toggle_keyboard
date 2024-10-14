@@ -4,6 +4,8 @@ layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 
 if [ $layout == "us" ]; then
     setxkbmap es
+elif [ $layout == "es" ]; then
+    setxkbmap dk
 else
     setxkbmap us
 fi
