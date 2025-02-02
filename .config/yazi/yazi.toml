@@ -2,8 +2,17 @@
 pdf = [
     { run = 'mupdf "$@"', orphan=true, desc="open-pdf" },
 ]
+image = [
+    { run = 'feh "$@"', orphan=true, desc="open-image" },
+]
 
 [open]
 prepend_rules = [
     { name = "*.pdf", use = "pdf" },
+    { name = "*.jpg", use = "image" },
+    { name = "*.jpeg", use = "image" },
+    { name = "*.png", use = "image" },
+    { name = "*.gif", use = "image" },
+    { name = "*.bmp", use = "image" },
 ]
+
