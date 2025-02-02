@@ -7,7 +7,7 @@ if (("$1" == 0 ))
 
 if (("$1" == 1 ))
     then
-    bluetoothctl connect 50:F9:58:42:70:FA
+    bluetoothctl connect 2C:BE:EB:D2:2E:5E
     fi
 
 if (("$1" == 2 ))
