@@ -1,6 +1,16 @@
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '>> '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[transient_prompt]
+  template = "<green>{{ .UserName }}@{{ .HostName }}</> <blue>{{ .Segments.Path.Path }}</> \n<magenta>$</> "
+  foreground = 'blue'
+  background = 'transparent'
 
 [[blocks]]
   type = 'prompt'
@@ -9,32 +19,37 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
   [[blocks.segments]]
     alias = 'User'
+    template = '{{ .UserName }}@{{ .HostName }} '
+    foreground = 'green'
+    background = 'transparent'
     type = 'text'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'green'
-    template = '{{ .UserName }}@{{ .HostName }} '
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
 
   [[blocks.segments]]
     alias = 'Path'
+    template = '{{ .Path }} '
+    foreground = 'blue'
+    background = 'transparent'
     type = 'path'
     style = 'plain'
-    background = 'transparent'
-    foreground = 'blue'
-    template = '{{ .Path }} '
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       style = 'full'
 
   [[blocks.segments]]
+    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<cyan>{{ if gt .Behind 0 }} ↓{{ end }}{{ if gt .Ahead 0 }} ↑{{ end }}</> '
+    foreground = '#6c6c6c'
+    background = 'transparent'
     type = 'git'
     style = 'plain'
-    background = 'transparent'
-    foreground = '#6c6c6c'
-    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}<cyan>{{ if gt .Behind 0 }} ↓{{ end }}{{ if gt .Ahead 0 }} ↑{{ end }}</> '
 
     [blocks.segments.properties]
       branch_icon = ''
+      cache_duration = 'none'
       commit_icon = '@'
       fetch_status = true
 
@@ -43,13 +58,14 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'executiontime'
-    style = 'plain'
+    template = '{{ .FormattedMs }}'
     foreground = 'yellow'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    type = 'executiontime'
+    style = 'plain'
 
     [blocks.segments.properties]
+      cache_duration = 'none'
       threshold = 2000
 
 [[blocks]]
@@ -59,22 +75,11 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
   [[blocks.segments]]
     alias = 'Dollar'
+    template = '$'
+    background = 'transparent'
     type = 'text'
     style = 'plain'
-    background = 'transparent'
-    foreground_templates = [
-      "{{ if gt .Code 0 }}red{{ end }}",
-      "{{ if eq .Code 0 }}magenta{{ end }}"
-    ]
-    template = '$'
+    foreground_templates = ['{{ if gt .Code 0 }}red{{ end }}', '{{ if eq .Code 0 }}magenta{{ end }}']
 
-[transient_prompt]
-  background = 'transparent'
-  foreground = 'blue'
-  template = "<green>{{ .UserName }}@{{ .HostName }}</> <blue>{{ .Segments.Path.Path }}</> \n<magenta>$</> "
-
-[secondary_prompt]
-  foreground = 'magenta'
-  background = 'transparent'
-  template = '>> '
-
+    [blocks.segments.properties]
+      cache_duration = 'none'
