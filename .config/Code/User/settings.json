@@ -1,64 +1,138 @@
 {
-    // editor stuff
-    "workbench.startupEditor": "none",
-    "workbench.editor.showTabs": "single",
-    "breadcrumbs.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "editor.selectionClipboard": false,
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
-    "editor.fontLigatures": true,
-    "editor.lineNumbers": "relative",
-    "editor.wordWrap": "off",
-    "editor.renderWhitespace": "all",
-    "window.menuBarVisibility": "hidden",
-    "editor.rulers": [
-        110
-    ],
-    // extensions
-    "git.confirmSync": false,
-    "git.autofetch": true,
-    "remote.SSH.defaultForwardedPorts": [],
-    "editor.minimap.enabled": false,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
+  // editor stuff
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": "single",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.selectionClipboard": false,
+  "workbench.sideBar.location": "right",
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "editor.wordWrap": "off",
+  "editor.renderWhitespace": "all",
+  "window.menuBarVisibility": "hidden",
+  "editor.rulers": [110],
+  // extensions
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "remote.SSH.defaultForwardedPorts": [],
+  "editor.minimap.enabled": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "catppuccin.italicComments": false,
+  "catppuccin.italicKeywords": false,
+  // python
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.activateEnvironment": true,
+  "python.analysis.extraPaths": [],
+  "python.analysis.typeCheckingMode": "basic",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
     },
-    "catppuccin.italicComments": false,
-    "catppuccin.italicKeywords": false,
-    // python
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.autoComplete.extraPaths": [],
-    "python.analysis.extraPaths": [],
-    "python.analysis.typeCheckingMode": "basic",
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+  },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
         "editor.codeActionsOnSave": {
-            "source.organizeImports.ruff": "explicit"
+            "source.sortImports": "always"
         }
     },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.formatOnSave": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        }
+    },
+    "[vue]": {
+        // "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "prettier.vueIndentScriptAndStyle": true,
+        "editor.codeActionsOnSave": {
+            "source.sortImports": "explicit"
+        }
+    },
+    "[svelte]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "svelte.svelte-vscode",
+        "editor.insertSpaces": true,
+        "svelte.enable-ts-plugin": true,
+        "editor.tabSize": 2,
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "svelte.enable-ts-plugin": true,
+        "editor.tabSize": 2,
     },
     "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "prettier.printWidth": 110,
         "editor.wordWrap": "off",
-        "prettier.proseWrap": "always"
+        "prettier.proseWrap": "always",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
     },
-    "jupyter.askForKernelRestart": false,
-    "svelte.enable-ts-plugin": true,
-    "liveServer.settings.useLocalIp": true,
-    "window.zoomLevel": 2,
-    "vslilypond.compilation.additionalCommandLineArguments": "--include=/home/yorch/documents/transcriptions/stylesheets",
-    "lilypond-workshop.compilerPath": "",
-    "prettier.printWidth": 110,
-    "prettier.tabWidth": 2,
-    "github.copilot.editor.enableAutoCompletions": true,
-    // "ruff.path": ["/home/jorge@grazper.net/.local/share/uv/tools/ruff/bin/ruff"]
+    "[sh]": {
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "[github-actions-workflow]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+  "jupyter.askForKernelRestart": false,
+  "liveServer.settings.useLocalIp": true,
+  "window.zoomLevel": 2,
+"explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+},
+"terminal.integrated.env.linux": {
+    "GIT_AUTHOR_NAME": "Jorge-Sintes_grazper",
+    "GIT_AUTHOR_EMAIL": "jorge.sintes@grazper.com",
+    "GIT_COMMITTER_NAME": "Jorge-Sintes_grazper",
+    "GIT_COMMITTER_EMAIL": "jorge.sintes@grazper.com",
+}
 }

@@ -107,13 +107,40 @@
         "command": "explorer.newFolder"
     },
     {
-        "key": "ctrl+shift+w",
+        "key": "ctrl+shift+\\",
         "command": "workbench.panel.chat.view.copilot.focus"
     },
     {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen"
     },
+    // Debugger stuff
+    {
+        "key": "ctrl+5",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+    {
+        "key": "ctrl+5",
+        "command": "workbench.action.debug.continue",
+        "when": "debugState == 'stopped'"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "workbench.action.debug.disconnect",
+        "when": "focusedSessionIsAttach && inDebugMode"
+    },
+    {
+        "key": "ctrl+6",
+        "command": "workbench.action.debug.pause",
+        "when": "debugState == 'running'"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+
     // code
     {
         "key": "ctrl+,",
@@ -167,5 +194,39 @@
     {
         "key": "ctrl+shift+t",
         "command": "workbench.view.extension.test"
-    }
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.toggleMaximizeEditorGroup"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.wordHighlight.next",
+        "when": "editorTextFocus && hasWordHighlights"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "editor.action.wordHighlight.prev",
+        "when": "editorTextFocus && hasWordHighlights"
+    },
+    {
+        "key": "shift+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly && editor.hasSelection"
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly && editor.hasSelection"
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
