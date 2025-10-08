@@ -1,6 +1,6 @@
-.git
-.bashrc
-pkglist.txt
-.zshrc
-.config/alactritty
-.config/kitty
+/.git
+/.bashrc
+/pkglist.txt
+/.zshrc
+/.config/alacritty/*
+/.config/kitty/*
