@@ -1,0 +1,2 @@
+exec setsid uwsm app -- "$TERMINAL" --class=Nmtui -e nmtui
+
