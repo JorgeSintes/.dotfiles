@@ -1,6 +1,9 @@
 # Set the directory for zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
+# paths
+export PATH="$PATH:$HOME/.local/bin"
+
 # Download Zinit, if it's not there yet
 if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
@@ -67,7 +70,7 @@ eval "$(zoxide init --cmd cd zsh)"
 xset r rate 300 40
 
 # uv
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # yazi
 function y() {
@@ -79,6 +82,3 @@ function y() {
   rm -f -- "$tmp"
 }
 
-# paths
-export PATH="$PATH:$HOME/scripts"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/.local/lib/raylib-5.0_linux_amd64/lib/"

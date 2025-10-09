@@ -1,7 +1,6 @@
 /.git
 /.bashrc
 /pkglist.txt
-/.zshrc
 /.config/alacritty/*
 /.config/kitty/*
 /README.md
