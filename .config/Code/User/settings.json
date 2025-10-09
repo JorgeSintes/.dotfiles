@@ -1,11 +1,11 @@
 {
-  // editor stuff
-  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Kanagawa",
+    "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "single",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.selectionClipboard": false,
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
