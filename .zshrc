@@ -82,3 +82,5 @@ function y() {
   rm -f -- "$tmp"
 }
 
+# Android emulation
+export ANDROID_AVD_HOME="$HOME/.config/.android/avd/"
