@@ -1,5 +1,5 @@
-{ "workbench.colorTheme": "Kanagawa",
-"update.mode": "none",
+{
+    "update.mode": "none",
     "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "single",
   "explorer.confirmDragAndDrop": false,
@@ -135,5 +135,6 @@
     "GIT_COMMITTER_NAME": "Jorge-Sintes_grazper",
     "GIT_COMMITTER_EMAIL": "jorge.sintes@grazper.com",
 },
-"github.copilot.nextEditSuggestions.enabled": true
+"github.copilot.nextEditSuggestions.enabled": true,
+"workbench.colorTheme": "Dark Modern"
 }
