@@ -3,11 +3,11 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(ssh grazper "find ~/ ~/Documents -mindepth 1 -maxdepth 1 -type d" | fzf)
+    selected=$(ssh grazper "find ~/ ~/Documents -mindepth 1 -maxdepth 1 \( -type d -o -name '*.code-workspace' \)" | fzf)
 fi
 
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-code --remote ssh-remote+grazper $selected/
+code --remote ssh-remote+grazper "$selected"
