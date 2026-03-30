@@ -1,13 +1,16 @@
 {
-    "update.mode": "none",
-    "workbench.startupEditor": "none",
+  "update.mode": "none",
+  "window.zoomLevel": -0.8,
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "single",
+  // "workbench.editor.useModal": "off",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.selectionClipboard": false,
   "workbench.sideBar.location": "left",
-//   "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
-//   "editor.fontLigatures": true,
+  //   "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', monospace",
+  //   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
   "editor.wordWrap": "off",
   "editor.renderWhitespace": "all",
@@ -22,100 +25,103 @@
     "*": false,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
   },
   "catppuccin.italicComments": false,
   "catppuccin.italicKeywords": false,
   // python
-  "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": false,
+  "python.terminal.activateEnvironment": false,
+  "python-envs.terminal.autoActivationType": "off",
   "python.analysis.extraPaths": [],
   "python.analysis.typeCheckingMode": "basic",
   "[python]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit",
+      "source.organizeImports": "explicit",
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
   },
-    "[typescript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.codeActionsOnSave": {
-            "source.sortImports": "always"
-        }
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.sortImports": "always",
     },
-    "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        }
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
     },
-    "[vue]": {
-        // "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "prettier.vueIndentScriptAndStyle": true,
-        "editor.codeActionsOnSave": {
-            "source.sortImports": "explicit"
-        }
+  },
+  "[vue]": {
+    // "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "prettier.vueIndentScriptAndStyle": true,
+    "editor.codeActionsOnSave": {
+      "source.sortImports": "explicit",
     },
-    "[svelte]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "svelte.svelte-vscode",
-        "editor.insertSpaces": true,
-        "svelte.enable-ts-plugin": true,
-        "editor.tabSize": 2,
+  },
+  "[svelte]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "svelte.svelte-vscode",
+    "editor.insertSpaces": true,
+    "svelte.enable-ts-plugin": true,
+    "editor.tabSize": 2,
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true,
+    "svelte.enable-ts-plugin": true,
+    "editor.tabSize": 2,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "prettier.printWidth": 110,
+    "editor.wordWrap": "off",
+    "prettier.proseWrap": "always",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off",
     },
-    "[html]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.insertSpaces": true,
-        "svelte.enable-ts-plugin": true,
-        "editor.tabSize": 2,
-    },
-    "[markdown]": {
-        "editor.unicodeHighlight.ambiguousCharacters": false,
-        "editor.unicodeHighlight.invisibleCharacters": false,
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "diffEditor.ignoreTrimWhitespace": false,
-        "prettier.printWidth": 110,
-        "editor.wordWrap": "off",
-        "prettier.proseWrap": "always",
-        "editor.quickSuggestions": {
-            "comments": "off",
-            "strings": "off",
-            "other": "off"
-        }
-    },
-    "[sh]": {
-        "editor.tabSize": 2
-    },
-    "[yaml]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "diffEditor.ignoreTrimWhitespace": false
-    },
-    "[github-actions-workflow]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "diffEditor.ignoreTrimWhitespace": false
-    },
+  },
+  "[sh]": {
+    "editor.tabSize": 2,
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+  },
+  "[github-actions-workflow]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false,
+  },
   "jupyter.askForKernelRestart": false,
   "liveServer.settings.useLocalIp": true,
-  "window.zoomLevel": 2,
-"explorer.fileNesting.patterns": {
+  "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
     "*.jsx": "${capture}.js",
@@ -127,14 +133,16 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
-},
-"terminal.integrated.env.linux": {
+    "*.s3db": "${capture}.${extname}-*",
+  },
+  "terminal.integrated.env.linux": {
     "GIT_AUTHOR_NAME": "Jorge-Sintes_grazper",
     "GIT_AUTHOR_EMAIL": "jorge.sintes@grazper.com",
     "GIT_COMMITTER_NAME": "Jorge-Sintes_grazper",
     "GIT_COMMITTER_EMAIL": "jorge.sintes@grazper.com",
-},
-"github.copilot.nextEditSuggestions.enabled": true,
-"workbench.colorTheme": "Dark Modern"
+  },
+  // "github.copilot.nextEditSuggestions.enabled": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
 }
