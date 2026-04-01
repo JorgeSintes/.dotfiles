@@ -61,6 +61,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias vim='nvim'
+alias o='opencode'
+alias oc='opencode -c'
 
 # Shell integrations
 eval "$(fzf --zsh)"
@@ -84,3 +86,4 @@ function y() {
 
 # Android emulation
 export ANDROID_AVD_HOME="$HOME/.config/.android/avd/"
+eval "$(direnv hook zsh)"
