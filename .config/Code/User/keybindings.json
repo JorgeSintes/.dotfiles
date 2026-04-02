@@ -133,12 +133,26 @@
     // ================================
     // Copilot / Chat
     // ================================
-
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.terminal.newWithProfile",
+        "args": {
+            "profileName": "OpenCode",
+            "location": "editor",
+        }
+    },
     {
         "key": "ctrl+shift+\\",
-        "command": "workbench.panel.chat.view.copilot.focus"
+        "command": "workbench.action.terminal.newWithProfile",
+        "args": {
+            "profileName": "OpenCode -c",
+            "location": "editor",
+        }
     },
-
     // ================================
     // Debugger
     // ================================

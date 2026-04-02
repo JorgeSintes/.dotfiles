@@ -5,6 +5,8 @@
   "workbench.editor.useModal": "off",
   "workbench.startupEditor": "none",
   "workbench.editor.showTabs": "single",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.commandPalette.showAskInChat": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.selectionClipboard": false,
@@ -19,6 +21,9 @@
     "workbench.action.moveEditorToLeftGroup",
     "workbench.action.moveEditorToRightGroup",
     "workbench.action.toggleMaximizeEditorGroup",
+    "view.zoomIn",
+    "view.zoomOut",
+    "workbench.action.toggleSidebarVisibility"
   ],
   // extensions
   "git.confirmSync": false,
@@ -126,5 +131,15 @@
     "GIT_AUTHOR_EMAIL": "jorge.sintes@grazper.com",
     "GIT_COMMITTER_NAME": "Jorge-Sintes_grazper",
     "GIT_COMMITTER_EMAIL": "jorge.sintes@grazper.com",
+  },
+  "terminal.integrated.profiles.linux": {
+    "OpenCode": {
+      "path": "bash",
+      "args": ["-lc", "opencode"]
+    },
+    "OpenCode -c": {
+      "path": "bash",
+      "args": ["-lc", "opencode -c"]
+    },
   },
 }
