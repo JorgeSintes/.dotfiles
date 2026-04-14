@@ -1,0 +1,46 @@
+#!/bin/sh
+set -eu
+
+state_dir="${XDG_RUNTIME_DIR:-/tmp}"
+stamp_file="$state_dir/hypr-language-switch.stamp"
+now_ms=$(date +%s%3N)
+
+if [ -f "$stamp_file" ]; then
+  last_ms=$(cat "$stamp_file" 2>/dev/null || printf '0')
+  if [ $((now_ms - last_ms)) -lt 400 ]; then
+    exit 0
+  fi
+fi
+
+printf '%s' "$now_ms" > "$stamp_file"
+
+devices_json=$(hyprctl devices -j)
+
+main_keyboard=$(printf '%s\n' "$devices_json" | jq -r '.keyboards[] | select(.main == true) | .name')
+current_layout=$(printf '%s\n' "$devices_json" | jq -r '.keyboards[] | select(.main == true) | .active_keymap')
+
+if [ -z "$main_keyboard" ] || [ "$main_keyboard" = "null" ]; then
+  main_keyboard=$(printf '%s\n' "$devices_json" | jq -r '.keyboards[0].name // empty')
+  current_layout=$(printf '%s\n' "$devices_json" | jq -r '.keyboards[0].active_keymap // empty')
+fi
+
+case "$current_layout" in
+  "English (US)")
+    next_index=1
+    message="🇪🇸 Español"
+    ;;
+  "Spanish")
+    next_index=2
+    message="🇩🇰 Dansk"
+    ;;
+  *)
+    next_index=0
+    message="🇺🇸 English (US)"
+    ;;
+esac
+
+printf '%s\n' "$devices_json" | jq -r '.keyboards[].name' | while IFS= read -r keyboard; do
+  hyprctl switchxkblayout "$keyboard" "$next_index" >/dev/null 2>&1 || true
+done
+
+notify-send -u low "Keyboard layout" "$message"
