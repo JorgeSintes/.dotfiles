@@ -23,13 +23,15 @@
     "workbench.action.toggleMaximizeEditorGroup",
     "view.zoomIn",
     "view.zoomOut",
-    "workbench.action.toggleSidebarVisibility"
+    "workbench.action.toggleSidebarVisibility",
+    "-workbench.action.quickOpen",
   ],
   // extensions
   "git.confirmSync": false,
   "git.autofetch": true,
   "remote.SSH.defaultForwardedPorts": [],
   "editor.minimap.enabled": false,
+  "python.terminal.activateEnvironment": false,
   "[python]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
@@ -91,6 +93,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.wordWrap": "off",
+    "prettier.proseWrap": "always",
+    "prettier.printWidth": 110,
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",

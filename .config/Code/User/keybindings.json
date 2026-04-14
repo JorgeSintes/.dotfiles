@@ -258,4 +258,8 @@
         "key": "ctrl+shift+t",
         "command": "workbench.view.extension.test"
     },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
 ]
