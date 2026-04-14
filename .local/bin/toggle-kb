@@ -1,19 +1,6 @@
 #!/bin/sh
 set -eu
 
-state_dir="${XDG_RUNTIME_DIR:-/tmp}"
-stamp_file="$state_dir/hypr-language-switch.stamp"
-now_ms=$(date +%s%3N)
-
-if [ -f "$stamp_file" ]; then
-  last_ms=$(cat "$stamp_file" 2>/dev/null || printf '0')
-  if [ $((now_ms - last_ms)) -lt 400 ]; then
-    exit 0
-  fi
-fi
-
-printf '%s' "$now_ms" > "$stamp_file"
-
 devices_json=$(hyprctl devices -j)
 
 main_keyboard=$(printf '%s\n' "$devices_json" | jq -r '.keyboards[] | select(.main == true) | .name')
