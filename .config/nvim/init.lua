@@ -29,4 +29,3 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.keymap.set({'n', 'x'}, '<leader>y', '"+y', {desc = 'Copy to clipboard'})
 vim.keymap.set({'n', 'x'}, '<leader>p', '"+p', {desc = 'Paste clipboard text'})
-

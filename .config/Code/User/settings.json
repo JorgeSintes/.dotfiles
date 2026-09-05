@@ -25,6 +25,7 @@
     "view.zoomOut",
     "workbench.action.toggleSidebarVisibility",
     "-workbench.action.quickOpen",
+    "workbench.action.quickOpenNavigatePreviousInFilePicker",
   ],
   // extensions
   "git.confirmSync": false,
@@ -110,6 +111,9 @@
     "editor.autoIndent": "advanced",
     "diffEditor.ignoreTrimWhitespace": false,
   },
+  "[c]": {
+    "editor.formatOnSave": true,
+  },
   "[github-actions-workflow]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -130,12 +134,6 @@
     "*.sdb": "${capture}.${extname}-*",
     "*.s3db": "${capture}.${extname}-*",
   },
-  "terminal.integrated.env.linux": {
-    "GIT_AUTHOR_NAME": "Jorge-Sintes_grazper",
-    "GIT_AUTHOR_EMAIL": "jorge.sintes@grazper.com",
-    "GIT_COMMITTER_NAME": "Jorge-Sintes_grazper",
-    "GIT_COMMITTER_EMAIL": "jorge.sintes@grazper.com",
-  },
   "terminal.integrated.profiles.linux": {
     "OpenCode": {
       "path": "bash",
@@ -145,5 +143,9 @@
       "path": "bash",
       "args": ["-lc", "opencode -c"]
     },
+  },
+  "workbench.editorAssociations": {
+    "{hexdiff}:/**/*.*": "hexEditor.hexedit",
+    "*.db": "hexEditor.hexedit"
   },
 }
